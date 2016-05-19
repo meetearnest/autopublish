@@ -2,7 +2,7 @@
 set -eu
 
 if [ -n "${CI-}" ]; then
-  echo '//registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}' >> "${HOME}/.npmrc"
+  echo "//registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}" >> "${HOME}/.npmrc"
 fi
 
 npm install
