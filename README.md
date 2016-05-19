@@ -1,5 +1,7 @@
 # autopublish
 
+[![Build Status](https://snap-ci.com/meetearnest/autopublish/branch/master/build_image)](https://snap-ci.com/meetearnest/autopublish/branch/master)
+
 ## What
 autopublish is a simple command-line tool to automagically publish an npm module to an npm registry when its version has changed. Autopublish is designed to be plugged into a CI/CD pipeline. It supports custom registries and private modules (e.g. as defined in an `.npmrc` file).
 
