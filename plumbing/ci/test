@@ -1,10 +1,5 @@
 #!/bin/bash
 set -eu
 
-# workaround for an SnapCI/nvm/npm issue
-# https://github.com/npm/npm/issues/10782
-# https://support.thoughtworks.com/requests/28466
-touch "${HOME}/.npmrc"
-
 npm install 
 npm test
