@@ -2,6 +2,7 @@
   "name": "autopublish",
   "version": "0.0.6",
   "description": "A tool for auto-publishing npm modules. Most useful in a CI/CD pipeline.",
+  "repository": "https://github.com/meetearnest/autopublish",
 	"bin": {
 	  "autopublish": "./bin/autopublish"
 	},
