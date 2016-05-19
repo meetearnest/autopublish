@@ -22,6 +22,3 @@ the ['publish'](https://www.npmjs.com/package/publish) module *almost* does what
 
 # License
 MIT
-
-# TODO
-- [ ] setup CI/CD pipeline (oh, how meta!)
