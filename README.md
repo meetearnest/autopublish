@@ -12,6 +12,8 @@ It's usually a good idea for humans to decide when a change to a module's implem
 ## How
 autopublish detects whether the current module should be published by checking to see whether the registry already contains a logically equivalent version, as defined by the `semver` module's `eq` function. If an equivalent version has not already been published then the local version is published.
 
+If the current module has never been published to the registry then autopublish will *not* publish a new module.
+
 ## Plugging autopublish in a CI/CD pipeline
 The cleanest way to integrate autopublish into your pipeline is to create a "publish module" stage in your CI tool which installs the autopublish module on-demand and then runs it directly. Here's an example publish script which installs autopublish and then runs it for the module in the current working directory:
 ``` publish.sh
