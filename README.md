@@ -26,6 +26,7 @@ npm install autopublish
 You can also install autopublish as a dev dependency, and perhaps add an `autopublish` script to your package.json. However if your goal is to encourage all your module publishing through the same mechanism - your CI tool - then keeping it out of your package.json entirely might avoid the temptation to run it by hand.
 
 # Contributing
+
 Pull requests welcome!
 
 Make sure tests pass before submitting your PR. `npm test` will run them. Note that there is a test for private module support which will only be run if you pass the name for a private package that the currently logged-in user has access to. You can run that test by specifying the module name via a `EXAMPLE_PRIVATE_PACKAGE` environment variable when running the tests, e.g. `EXAMPLE_PRIVATE_PACKAGE=our_private_package npm test`. If you don't specify an example private package then that test will be skipped.
