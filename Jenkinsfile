@@ -15,5 +15,10 @@ pipeline {
         printEnvSorted ()
       }
     }
-  }
+
+    stage("Run all unit tests") {
+      steps {
+        sh "./plumbing/ci/test.sh"
+      }
+    }
 }
