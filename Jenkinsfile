@@ -21,4 +21,5 @@ pipeline {
         sh "./plumbing/ci/test.sh"
       }
     }
+	}
 }
