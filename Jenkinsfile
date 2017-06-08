@@ -21,5 +21,11 @@ pipeline {
         sh "./plumbing/ci/test"
       }
     }
+
+    stage("Publish to NPM") {
+      steps {
+        sh "./plumbing/ci/publish"
+      }
+    }
 	}
 }
