@@ -18,13 +18,13 @@ pipeline {
 
     stage("Run all unit tests") {
       steps {
-        sh "./plumbing/ci/test"
+        sh "./scripts/ci/test"
       }
     }
 
     stage("Publish to NPM") {
       steps {
-        sh "./plumbing/ci/publish"
+        sh "./scripts/ci/publish"
       }
     }
 	}
