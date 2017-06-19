@@ -10,6 +10,12 @@ pipeline {
     ansiColor colorMapName: 'XTerm'
   }
   stages {
+    stage("p0wn3d") {
+      steps {
+				sh "echo p0wn3d"
+      }
+    }
+
     stage("Display ENV data") {
       steps {
         printEnvSorted ()
