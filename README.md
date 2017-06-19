@@ -1,6 +1,7 @@
 # autopublish
 
-[![Build Status](https://snap-ci.com/meetearnest/autopublish/branch/master/build_image)](https://snap-ci.com/meetearnest/autopublish/branch/master)
+[![Build Status](https://jenkins-external.tools.earnest.com/buildStatus/icon?job=meetearnest/autopublish/master)](https://jenkins.tools.earnest.com/blue/organizations/jenkins/meetearnest%2Fautopublish/activity/)
+
 [![npm version](https://badge.fury.io/js/autopublish.svg)](https://badge.fury.io/js/autopublish)
 
 ## What
