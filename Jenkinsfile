@@ -1,31 +1,16 @@
-#!/usr/bin/env groovy
-@Library('jenkins-pipeline-library') _
- 
 pipeline {
   agent {
-    label "generic"    // Our preferred agent (generic, platform, etc.)
-  }
+    label "generic"
+  }    
   options {
-    timeout 60 // minutes
     ansiColor colorMapName: 'XTerm'
+    timestamps()
   }
   stages {
-    stage("Display ENV data") {
+    stage("test") {
       steps {
-        printEnvSorted ()
+        sh "echo hello"
       }
     }
-
-    stage("Run all unit tests") {
-      steps {
-        sh "./scripts/ci/test"
-      }
-    }
-
-    stage("Publish to NPM") {
-      steps {
-        sh "./scripts/ci/publish"
-      }
-    }
-	}
+  }
 }
