@@ -20,7 +20,7 @@
   "dependencies": {
     "bluebird": "^3.3.5",
     "lodash": "^4.11.1",
-    "npm": "^3.8.7",
+    "npm": "^6.13.4",
     "npm-registry-client": "^7.1.0",
     "npmlog": "^2.0.3",
     "semver": "^5.1.0"
