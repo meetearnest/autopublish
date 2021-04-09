@@ -1,7 +1,0 @@
-#!/bin/bash
-set -eu
-
-npm install
-
-# Yo dawg, I heard you liked autopublish so I'm using autopublish to publish autopublish.
-./bin/autopublish .
