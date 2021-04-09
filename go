@@ -4,7 +4,7 @@ export GIT_BRANCH=${GIT_BRANCH:-$(git rev-parse --abbrev-ref HEAD 2> /dev/null)}
 function build {
     echo "go: building gadget"
     (docker-compose build --no-cache publisher)
-    (docker-compose build gadget)
+    (docker-compose build --no-cache gadget)
 
     # in theory, we could use docker cp, but I couldn't get it to actually, you know, work.
     echo "go: copying package-lock.json"
