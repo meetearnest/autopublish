@@ -32,6 +32,7 @@ ENTRYPOINT ["./docker-entrypoint.sh"]
 FROM "earnest/node14:1.0.1-34374e3" AS gadget
 
 COPY --from=npm_installer /usr/src/app/node_modules /usr/src/app
+COPY .npmrc .
 COPY package.json .
 COPY docker-entrypoint.sh .
 COPY src ./src
