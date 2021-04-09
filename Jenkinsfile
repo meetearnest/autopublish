@@ -25,6 +25,9 @@ pipeline {
     }
 
     stage("Publish to NPM") {
+      when {
+        branch "master"
+      }
       steps {
         prepareNpmEnv()
         prepareDockerEnv()
