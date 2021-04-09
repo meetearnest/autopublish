@@ -42,7 +42,8 @@ COPY bin ./bin
 ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
         echo $TZ > /etc/timezone && \
-        npm install --only=dev 
+        npm install --only=dev && \
+        ls node_modules/
 
 ENTRYPOINT ["./docker-entrypoint.sh"]
 
