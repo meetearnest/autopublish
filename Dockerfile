@@ -10,13 +10,12 @@ ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
         echo $TZ > /etc/timezone && \
         npm install && \
-        npm install --only=dev && \
-        ls node_modules/wide-align/package.json
+        npm install --only=dev
 
 ### 
 FROM "earnest/node14:1.0.1-34374e3" AS gadget
 
-COPY --from=npm_installer /usr/src/app/node_modules /usr/src/app
+COPY --from=npm_installer /usr/src/app/node_modules /usr/src/app/node_modules
 COPY package.json .
 COPY docker-entrypoint.sh .
 COPY src ./src

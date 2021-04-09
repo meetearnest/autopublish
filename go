@@ -5,10 +5,6 @@ function build {
     echo "go: building gadget"
     (docker-compose build --no-cache gadget)
 
-    # in theory, we could use docker cp, but I couldn't get it to actually, you know, work.
-    echo "go: copying package-lock.json"
-    docker-compose run --rm --volume=[] gadget cat /usr/src/app/package-lock.json | tr -d '\r' > package-lock.json
-
     echo "go: touching .Dockerfile"
     touch .Dockerfile
 }
@@ -68,6 +64,9 @@ function main {
             ;;
         just-gadget)
             gadget $*
+            ;;
+        nuke)
+            docker-compose rm -f
             ;;
         shell)
             shell $*

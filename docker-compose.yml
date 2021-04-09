@@ -9,24 +9,8 @@ services:
     environment:
       - APP_ENV="${APP_ENV:-test}"
     volumes:
-       - ./:/usr/src/app/:cached
-       - node_modules_gadget:/usr/src/app/node_modules
+       - ./bin:/usr/src/app/bin:cached
+       - ./src:/usr/src/app/src:cached
+       - ./test:/usr/src/app/test:cached
     ports:
       - "5858:5858"
-
-  publisher:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      target: publisher
-    environment:
-      - APP_ENV="${APP_ENV:-test}"
-    volumes:
-       - ./:/usr/src/app/:cached
-       - node_modules_publisher:/usr/src/app/node_modules
-    ports:
-      - "5858:5858"
-
-volumes:
-  node_modules_gadget:
-  node_modules_publisher:
