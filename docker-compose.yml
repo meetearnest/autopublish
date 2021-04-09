@@ -1,0 +1,16 @@
+version: '3.2'
+
+services:
+  gadget:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: gadget
+    environment:
+      - APP_ENV="${APP_ENV:-test}"
+    volumes:
+       - ./bin:/usr/src/app/bin:cached
+       - ./src:/usr/src/app/src:cached
+       - ./test:/usr/src/app/test:cached
+    ports:
+      - "5858:5858"

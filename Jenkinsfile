@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 @Library('jenkins-pipeline-library') _
- 
+
 pipeline {
   agent {
     label "generic"    // Our preferred agent (generic, platform, etc.)
@@ -18,14 +18,21 @@ pipeline {
 
     stage("Run all unit tests") {
       steps {
-        sh "./scripts/ci/test"
+        prepareNpmEnv()
+        prepareDockerEnv()
+        sh "./go test"
       }
     }
 
     stage("Publish to NPM") {
+      when {
+        branch "master"
+      }
       steps {
-        sh "./scripts/ci/publish"
+        prepareNpmEnv()
+        prepareDockerEnv()
+        sh "./go publish"
       }
     }
-	}
+  }
 }
